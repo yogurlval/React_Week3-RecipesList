@@ -1,0 +1,122 @@
+.header{
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: pink;
+    
+}
+
+.home-title{
+    font-size: x-large;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.homepage-btns{
+    background-color: pink;
+    border: none;
+    font-size: larger;
+    margin: 10px;
+}
+
+.homepage-btns:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.banner{
+    height: 300px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.banner-text{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.h3{
+    font-size: larger;
+    padding: 5px;
+}
+
+.banner-title{
+    font-size: 2.5em;
+    padding: 20px;
+    font-weight: 600;
+    color: lightsalmon
+}
+
+.blue-btn{
+    width: 140px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    font-family: sans-serif;
+    background-color: peachpuff;
+    border: none;
+    font-size: 15px;
+    
+}
+
+.blue-btn:hover{
+    cursor: pointer;
+    background-color: lightcyan;
+}
+
+.recipe_container {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+
+  .search-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+.search_bar {
+    min-width: 250px;
+    width: 30vw;
+    border-radius: 50px;
+    border: none;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0 5px;
+    box-sizing: border-box;
+    margin-top: 25px;
+  }
+  
+  .search_bar input {
+    width: 100%;
+    border-radius: 30px;
+    font-size: 20px;
+  }
+
+  input {
+    height: 45px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent
+  }
+
+  h3 {
+    font-size: 22px;
+    font-family: sans-serif;
+  }
