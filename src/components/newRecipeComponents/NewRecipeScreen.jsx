@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import { Formik } from "formik"
+import './NewRecipe.css'
+import axios from 'axios'
 
 const NewRecipeScreen = () => {
 
@@ -22,7 +24,15 @@ const NewRecipeScreen = () => {
     values.ingredients = ingredients;
     console.log(values);
 
-  }
+     axios
+      .post(`https://recipes.devmountain.com/recipes`, values)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const addIngredient = () => {
     setIngredients([...ingredients, { name, quantity }]);
@@ -39,8 +49,7 @@ const NewRecipeScreen = () => {
   });
 
   return (
-    <section>
-      <h1>Tell us about your Recipe!</h1>
+    <section className="form-section">
       <h1>Tell us about your Recipe!</h1>
       <Formik initialValues={initialValues} onSubmit={onSubmit}>
         {({ values, handleChange, handleSubmit }) => (
@@ -53,7 +62,7 @@ const NewRecipeScreen = () => {
                 name="recipeName"
               />
               <input
-                placeholder="Paste an Image URL"
+                placeholder="Image URL"
                 value={values.imageURL}
                 onChange={handleChange}
                 name="imageURL"
@@ -126,13 +135,13 @@ const NewRecipeScreen = () => {
             </div>
             <button
               type="button"
-              className="orange-btn"
+              className="blue-btn"
               onClick={addIngredient}
             >
               Add Another
             </button>
             <textarea
-              placeholder="Type your instructions"
+              placeholder="Instructions"
               rows={5}
               value={values.instructions}
               onChange={handleChange}
